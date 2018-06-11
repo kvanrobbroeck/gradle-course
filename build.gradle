@@ -1,0 +1,79 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'pmd'
+
+archivesBaseName = "foo"
+
+defaultTasks "fubar83"
+
+pmd {
+    ignoreFailures = true
+    ruleSets = [
+            "java-basic", "java-braces", "java-naming", "java-android", "java-clone", "java-codesize", "java-controversial", "java-design", "java-finalizers", "java-imports", "java-j2ee", "java-javabeans", "java-junit", "java-logging-jakarta-commons", "java-logging-java", "java-migrating", "java-optimizations", "java-strictexception", "java-strings", "java-sunsecure", "java-typeresolution", "java-unusedcode"
+    ]
+}
+
+task "kevin" (type: Copy) {
+    from "src/main/java"
+    into "build/kevin"
+}
+
+def i = 0;
+while(++i <= 100) {
+    def j = i;
+    task "fubar$i" {
+        doLast {
+            println "LAST MAN STANDING $j"
+
+        }
+    }
+}
+
+
+apply plugin: 'application'
+mainClassName = "be.vdab.HelloAssets"
+//run.args = ["Arnold", "Sylvester"]
+//run.jvmArgs = ['-Dfoo=bar']
+
+task helloworld {
+    doLast {
+        println "Hello World"
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://dl.bintray.com/jmonkeyengine/org.jmonkeyengine/"
+    }
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile 'org.jmonkeyengine:jme3-core:3.2.1-stable'
+    compile 'org.jmonkeyengine:jme3-desktop:3.2.1-stable'
+    compile 'org.jmonkeyengine:jme3-lwjgl:3.2.1-stable'
+//    compile 'org.jmonkeyengine:jme3-bullet:3.2.1-stable'
+}
+
+jacocoTestReport.dependsOn test
+
+
+
+
+//<dependency>
+//<groupId>org.jmonkeyengine</groupId>
+//        <artifactId>jme3-core</artifactId>
+//<version>${jmonkey.version}</version>
+//    </dependency>
+//<dependency>
+//<groupId>org.jmonkeyengine</groupId>
+//        <artifactId>jme3-desktop</artifactId>
+//<version>${jmonkey.version}</version>
+//        <scope>runtime</scope>
+//</dependency>
+//    <dependency>
+//        <groupId>org.jmonkeyengine</groupId>
+//<artifactId>jme3-lwjgl</artifactId>
+//        <version>${jmonkey.version}</version>
+//</dependency>
