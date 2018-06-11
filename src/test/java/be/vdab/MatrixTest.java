@@ -6,6 +6,6 @@ import org.junit.Test;
 public class MatrixTest {
     @Test
     public void bla() {
-        Assert.assertEquals(Fibonacci.fib(5), 5);
+        Assert.assertEquals(Fibonacci.fib(5), 6);
     }
 }
