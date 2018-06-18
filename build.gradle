@@ -52,7 +52,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'org.jmonkeyengine:jme3-core:3.2.1-stable'
     compile 'org.jmonkeyengine:jme3-desktop:3.2.1-stable'
-    compile 'org.jmonkeyengine:jme3-lwjgl:3.2.1-stable'
+    compile 'org.jmonkeyengine:jme3-lwjgl:3.2.1-stable'     // Karel!!!!!
 //    compile 'org.jmonkeyengine:jme3-bullet:3.2.1-stable'
 }
 
