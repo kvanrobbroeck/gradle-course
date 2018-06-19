@@ -1,8 +1,12 @@
+# Gradle
+gradle/
+gradlew*
 build/
 
+# IntelliJ
 *.iml
 .idea/
-gradle/
 
+# Native libs
 *.dll
 *.so
