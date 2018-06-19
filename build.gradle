@@ -53,7 +53,10 @@ dependencies {
     compile 'org.jmonkeyengine:jme3-core:3.2.1-stable'
     compile 'org.jmonkeyengine:jme3-desktop:3.2.1-stable'
     compile 'org.jmonkeyengine:jme3-lwjgl:3.2.1-stable'     // Karel!!!!!
-//    compile 'org.jmonkeyengine:jme3-bullet:3.2.1-stable'
+    compile 'org.jmonkeyengine:jme3-bullet-native:3.2.1-stable'
+    compile files('./jme3-testdata.jar')
+    compile group: 'org.jmonkeyengine', name: 'jme3-examples', version: '3.2.1-stable'
+    compile 'org.jmonkeyengine:jme3-bullet:3.2.1-stable'
 }
 
 jacocoTestReport.dependsOn test
