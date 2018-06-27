@@ -2,10 +2,12 @@
 gradle/
 gradlew*
 build/
+.gradle
 
 # IntelliJ
 *.iml
 .idea/
+out/
 
 # Native libs
 *.dll
