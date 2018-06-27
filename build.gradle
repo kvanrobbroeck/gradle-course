@@ -64,23 +64,3 @@ dependencies {
 }
 
 jacocoTestReport.dependsOn test
-
-
-
-
-//<dependency>
-//<groupId>org.jmonkeyengine</groupId>
-//        <artifactId>jme3-core</artifactId>
-//<version>${jmonkey.version}</version>
-//    </dependency>
-//<dependency>
-//<groupId>org.jmonkeyengine</groupId>
-//        <artifactId>jme3-desktop</artifactId>
-//<version>${jmonkey.version}</version>
-//        <scope>runtime</scope>
-//</dependency>
-//    <dependency>
-//        <groupId>org.jmonkeyengine</groupId>
-//<artifactId>jme3-lwjgl</artifactId>
-//        <version>${jmonkey.version}</version>
-//</dependency>
