@@ -43,6 +43,7 @@ task helloworld {
 
 repositories {
     mavenCentral()
+
     maven {
         url "https://dl.bintray.com/jmonkeyengine/org.jmonkeyengine/"
     }
@@ -55,6 +56,8 @@ dependencies {
     }
     compile 'org.jmonkeyengine:jme3-bullet:3.2.1-stable'
     compile 'org.jmonkeyengine:jme3-bullet-native:3.2.1-stable'
+
+
     compile files('./jme3-testdata.jar')
 
     testCompile 'junit:junit:4.12'

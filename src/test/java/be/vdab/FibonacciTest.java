@@ -7,5 +7,6 @@ public class FibonacciTest {
     @Test
     public void bla() {
         Assert.assertEquals(Fibonacci.fib(5), 5);
+
     }
 }
